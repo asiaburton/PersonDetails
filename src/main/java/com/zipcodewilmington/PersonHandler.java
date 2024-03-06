@@ -7,6 +7,7 @@ public class PersonHandler {
     private final Person[] personArray;
 
     public PersonHandler(Person[] personArray) {
+
         this.personArray = personArray;
     }
 
@@ -14,7 +15,15 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
-        String result = "";
+        int counter = 0;
+        StringBuilder str = new StringBuilder();
+        while(counter < personArray.length) {
+
+
+            Person currentPerson = personArray[counter];
+            str.append(currentPerson);
+            counter++;
+        } // something else
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -24,13 +33,20 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
+        return str.toString();
     }
 
 
 
     public String forLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i < personArray.length; i++) {
+            Person currentPerson = personArray[i];
+            result.append(currentPerson);
+
+
+        }
+
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -42,13 +58,17 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return result.toString();
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+        for(Person person : personArray) {
+            result.append(person);
+        }
+
         // identify array's type
         // identify array's variable-name
 
@@ -58,7 +78,7 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return result.toString();
     }
 
 
