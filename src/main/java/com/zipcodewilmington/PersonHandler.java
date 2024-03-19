@@ -19,7 +19,6 @@ public class PersonHandler {
         StringBuilder str = new StringBuilder();
         while(counter < personArray.length) {
 
-
             Person currentPerson = personArray[counter];
             str.append(currentPerson);
             counter++;
@@ -27,11 +26,9 @@ public class PersonHandler {
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
-
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
-
             // end loop
         return str.toString();
     }
@@ -43,8 +40,6 @@ public class PersonHandler {
         for(int i = 0; i < personArray.length; i++) {
             Person currentPerson = personArray[i];
             result.append(currentPerson);
-
-
         }
 
         // identify initial value
